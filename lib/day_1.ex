@@ -73,7 +73,7 @@ defmodule Day1 do
   end
 
   defp replace_permutations(value) do
-    Enum.reduce(get_permutations(), fn {k, v}, acc ->
+    Enum.reduce(get_permutations(), value, fn {k, v}, acc ->
       String.replace(acc, k, v)
     end)
   end
